@@ -9,7 +9,7 @@ COPY ./src .
 
 CMD [ \
     "gunicorn", "wasgi_test.asgi:application", \
-    "-k", "wasgi_test.server.UvicornWorker", \
+    "-k", "wasgi_test.server.MyUvicornWorker", \
     "-w", "1", \
     "--bind", "0.0.0.0:8000" \
 ]
